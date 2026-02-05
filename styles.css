@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=JetBrains+Mono:wght@300&display=swap');
+
+@font-face {
+  font-family: 'Ballet';
+  src: url('Ballet.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('Cormorant.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant Italic';
+  src: url('CormorantItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Cormorant';
+  src: url('EBGaramond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Cormorant Italic';
+  src: url('EBGaramondItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hopeless Romantic';
+  src: url('HopelessRomantic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nostalgia';
+  src: url('Nostalgia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant';
+  background: #f5f3ee;;
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 680px;
+  width: 100%;
+}
+
+/* Opening statement */
+.opening {
+  margin-bottom: 80px;
+  opacity: 0;
+  animation: breathe 2s ease forwards;
+}
+
+@keyframes breathe {
+  to { opacity: 1; }
+}
+
+.hello {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+.truth {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: breathe 2s ease 0.8s forwards;
+}
+
+/* Search - the heart */
+.search-section {
+  margin: 100px 0;
+  opacity: 0;
+  animation: breathe 2s ease 1.6s forwards;
+}
+
+.search-prompt {
+  font-family: "Ballet";
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.search-box {
+  position: relative;
+}
+
+#search {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  background: transparent;
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-size: 2rem;
+  padding: 16px 0;
+  outline: none;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+
+#search::placeholder {
+  color: rgba(0,0,0,0.25);
+  font-weight: 400;
+}
+
+#search:focus {
+  border-bottom-color: #1a1a1a;
+}
+
+/* Results */
+#results {
+  margin-top: 80px;
+}
+
+.entry {
+  margin-bottom: 80px;
+  opacity: 0;
+  animation: appear 1s ease forwards;
+  padding-left: 32px;
+}
+
+@keyframes appear {
+  to { opacity: 1; }
+}
+
+.entry:nth-child(1) { animation-delay: 0.2s; }
+.entry:nth-child(2) { animation-delay: 0.4s; }
+.entry:nth-child(3) { animation-delay: 0.6s; }
+
+.entry-title {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.entry-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.entry-meta {
+  font-size: 0.95rem;
+  opacity: 0.5;
+}
+
+/* The deeper link */
+.deeper {
+  margin-top: 300px;
+  text-align: center;
+  opacity: 0;
+  animation: breathe 2s ease 2.4s forwards;
+}
+
+.deeper-text {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  opacity: 0.7;
+  color: inherit;
+  font-style: italic;
+}
+
+a {
+  color: #a8a7a3;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+.empty {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.4;
+  text-align: center;
+  padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .hello {
+    font-size: 2.5rem;
+  }
+
+  #search {
+    font-size: 1.5rem;
+  }
+
+  .entry {
+    padding-left: 20px;
+  }
+}
