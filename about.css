@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Cedarvile';
+  src: url('Cedarvile.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mrs Saint Delafield';
+  src: url('MrsSaintDelafield.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #f5f3ee;
+}
+
+p {
+    font-family: "Cedarvile";
+    font-size: 1.5rem;
+}
+
+.about {
+  max-width: 900px;
+  width: 100%;
+  margin-left: 25rem;
+  margin-top: 7rem;
+}
+
+.signature {
+   display: flex;
+   align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.name {
+    font-family: "Mrs Saint Delafield";
+    font-size: 3.5rem;
+}
